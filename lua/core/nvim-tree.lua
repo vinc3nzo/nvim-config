@@ -8,7 +8,7 @@ local function on_attach()
     api.config.mappings.default_on_attach(bufnr)
 
     -- custom mappings
-    -- vim.keymap.set('n', '<C-e>', api.tree.toggle, opts('Toggle Tree'))
+    vim.keymap.set('n', '<C-e>', api.tree.toggle, opts('Toggle Tree'))
 end
 
 return {
