@@ -5,8 +5,6 @@
   "lualine": { "branch": "master", "commit": "2248ef254d0a1488a72041cfb45ca9caada6d994" },
   "mason": { "branch": "main", "commit": "41e75af1f578e55ba050c863587cffde3556ffa6" },
   "mason-lspconfig": { "branch": "main", "commit": "ab640b38ca9fa50d25d2d249b6606b9456b628d5" },
-  "mason-lspconfig.nvim": { "branch": "main", "commit": "ab640b38ca9fa50d25d2d249b6606b9456b628d5" },
-  "mason.nvim": { "branch": "main", "commit": "41e75af1f578e55ba050c863587cffde3556ffa6" },
   "nvim-tree": { "branch": "master", "commit": "fb892973477e131042d737c9fc822c7c2ace5076" },
   "nvim-web-devicons": { "branch": "master", "commit": "cdbcca210cf3655aa9b31ebf2422763ecd85ee5c" }
 }
