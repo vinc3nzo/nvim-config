@@ -1,5 +1,5 @@
 -- lazy plugin manager
-require("vinc3nzo.lazy")
+require("lazy-config")
 
 -- tab settings
 vim.opt.expandtab = true
