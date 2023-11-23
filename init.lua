@@ -10,3 +10,6 @@ vim.opt.autoindent = true
 -- whitespace display
 vim.opt.listchars = { space = "·" }
 vim.opt.list = true
+
+-- line numbers
+vim.opt.number = true

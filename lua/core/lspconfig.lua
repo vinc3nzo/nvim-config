@@ -10,6 +10,7 @@ local function config()
       "lua_ls",
       "sqlls",
       "pylsp",
+      "docker_compose_language_service",
     },
   })
 
@@ -42,6 +43,9 @@ local function config()
       }
     }
   })
+
+  -- Docker-compose --
+  lspconfig.docker_compose_language_service.setup({})
 
   -- display documentation
   vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
