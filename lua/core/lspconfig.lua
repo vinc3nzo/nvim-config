@@ -9,6 +9,7 @@ local function config()
     ensure_installed = {
       "lua_ls",
       "sqlls",
+      "pylsp",
     },
   })
 
@@ -23,9 +24,23 @@ local function config()
     filetypes = { "haskell", "lhaskell", "cabal" },
   })
 
-  -- SQL (Postgres)
+  -- SQL --
   lspconfig.sqlls.setup({
     capabilities = capabilities,
+  })
+
+  -- Python --
+  lspconfig.pylsp.setup({
+    settings = {
+      pylsp = {
+        plugins = {
+          pycodestyle = {
+            ignore = {'W391'},
+            maxLineLength = 100
+          }
+        }
+      }
+    }
   })
 
   -- display documentation

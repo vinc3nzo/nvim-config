@@ -5,6 +5,7 @@ require("lazy-config")
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.autoindent = true
 
 -- whitespace display
 vim.opt.listchars = { space = "·" }
