@@ -8,8 +8,11 @@ vim.opt.shiftwidth = 2
 vim.opt.autoindent = true
 
 -- whitespace display
-vim.opt.listchars = { space = "·" }
+vim.opt.listchars:append({ space = "·" })
 vim.opt.list = true
 
 -- line numbers
 vim.opt.number = true
+
+-- share clipboard with the system
+vim.opt.listchars:append('unnamedplus')

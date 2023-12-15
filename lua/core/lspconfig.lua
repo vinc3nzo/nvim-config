@@ -11,6 +11,7 @@ local function config()
       "sqlls",
       "pylsp",
       "docker_compose_language_service",
+      "solargraph",
     },
   })
 
@@ -46,6 +47,9 @@ local function config()
 
   -- Docker-compose --
   lspconfig.docker_compose_language_service.setup({})
+
+  -- Ruby --
+  lspconfig.solargraph.setup({})
 
   -- display documentation
   vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

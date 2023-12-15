@@ -12,7 +12,7 @@ return {
         ["<C-f>"] = cmp.mapping.scroll_docs(4),
         ["<C-o>"] = cmp.mapping.complete(),
         ["<C-i>"] = cmp.mapping.abort(),
-        ["<CR>"] = cmp.mapping.confirm({ select = true })
+        ["<Tab>"] = cmp.mapping.confirm({ select = true }),
       }),
       snippet = {
         expand = function(args)
