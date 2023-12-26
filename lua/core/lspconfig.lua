@@ -12,6 +12,7 @@ local function config()
       "pylsp",
       "docker_compose_language_service",
       "solargraph",
+      "rust_analyzer",
     },
   })
 
@@ -50,6 +51,9 @@ local function config()
 
   -- Ruby --
   lspconfig.solargraph.setup({})
+
+  -- Rust --
+  lspconfig.rust_analyzer.setup({})
 
   -- display documentation
   vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
