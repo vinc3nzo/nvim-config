@@ -53,7 +53,15 @@ local function config()
   lspconfig.solargraph.setup({})
 
   -- Rust --
-  lspconfig.rust_analyzer.setup({})
+  lspconfig.rust_analyzer.setup({
+    settings = {
+      ['rust_analyzer'] = {
+        cargo = {
+          allFeatures = true,
+        },
+      },
+    },
+  })
 
   -- display documentation
   vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
