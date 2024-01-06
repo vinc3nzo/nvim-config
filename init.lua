@@ -15,4 +15,4 @@ vim.opt.list = true
 vim.opt.number = true
 
 -- share clipboard with the system
-vim.opt.listchars:append('unnamedplus')
+vim.opt.clipboard:append('unnamedplus')

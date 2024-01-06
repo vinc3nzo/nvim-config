@@ -13,6 +13,7 @@ local function config()
       "docker_compose_language_service",
       "solargraph",
       "rust_analyzer",
+      "typst_lsp",
     },
   })
 
@@ -62,6 +63,9 @@ local function config()
       },
     },
   })
+
+  -- Typst --
+  lspconfig.typst_lsp.setup({})
 
   -- display documentation
   vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
