@@ -1,3 +1,13 @@
+local function on_attach(client, bufnr)
+  local opts = { buffer = bufnr }
+
+  -- display documentation
+  vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+  vim.keymap.set('n', 'gk', vim.lsp.buf.hover, opts)
+  vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+end
+
 local function config()
   local mason = require("mason")
   local mason_lspconfig = require("mason-lspconfig")
@@ -35,6 +45,7 @@ local function config()
 
   -- Python --
   lspconfig.pylsp.setup({
+    capabilities = capabilities,
     settings = {
       pylsp = {
         plugins = {
@@ -48,13 +59,18 @@ local function config()
   })
 
   -- Docker-compose --
-  lspconfig.docker_compose_language_service.setup({})
+  lspconfig.docker_compose_language_service.setup({
+    capabilities = capabilities,
+  })
 
   -- Ruby --
-  lspconfig.solargraph.setup({})
+  lspconfig.solargraph.setup({
+    capabilities = capabilities,
+  })
 
   -- Rust --
   lspconfig.rust_analyzer.setup({
+    capabilities = capabilities,
     settings = {
       ['rust_analyzer'] = {
         cargo = {
@@ -64,11 +80,10 @@ local function config()
     },
   })
 
-  -- Typst --
-  lspconfig.typst_lsp.setup({})
-
-  -- display documentation
-  vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+  -- Typst 
+  lspconfig.typst_lsp.setup({
+    capabilities = capabilities,
+  })
 end
 
 return {
@@ -80,4 +95,5 @@ return {
     "hrsh7th/nvim-cmp",
   },
   config = config,
+  on_attach = on_attach,
 }
